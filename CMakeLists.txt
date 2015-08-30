@@ -13,7 +13,7 @@ else (WIN32)
 	set (QT_DIR "/usr/include" CACHE PATH "Qt library path")
 endif (WIN32)
 
-message ("Generating WPlot project")
+message ("Generating WTrade project")
 message ("Setting QT_DIR To ${QT_DIR}")
 
 add_subdirectory (src)

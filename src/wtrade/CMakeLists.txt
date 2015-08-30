@@ -9,10 +9,10 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package (Qt5Widgets REQUIRED)
 include_directories (${CMAKE_SOURCE_DIR} ${Qt5Widgets_INCLUDE_DIRS})
-file (GLOB DEMO_SOURCES "*.cpp")
+file (GLOB WTRADE_SOURCES "*.cpp")
 
 # Compile project
-add_executable (wtrade ${DEMO_SOURCES})
+add_executable (wtrade ${WTRADE_SOURCES})
 target_link_libraries(wtrade  ${Qt5Widgets_LIBRARIES})
 set_property(TARGET wtrade PROPERTY CXX_STANDARD 11)
 set_property(TARGET wtrade PROPERTY CXX_STANDARD_REQUIRED ON)
