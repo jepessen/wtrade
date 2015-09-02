@@ -1,0 +1,24 @@
+#include "wtrade/Options.h"
+
+namespace WTrade {
+
+///////////////////////////////////////////////////////////////////////////////
+// USING SECTION                                                             //
+///////////////////////////////////////////////////////////////////////////////
+
+using WTradeGui::MainWindow;
+using WTradeGui::OptionWidget;
+
+///////////////////////////////////////////////////////////////////////////////
+// PUBLIC SECTION                                                            //
+///////////////////////////////////////////////////////////////////////////////
+
+Options::Options() {
+}
+
+void Options::showWindow(MainWindow *mainWindow) {
+	OptionWidget *optionWidget(new OptionWidget(mainWindow));
+	optionWidget->show();
+}
+
+} // namespace WTrade

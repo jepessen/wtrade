@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0.0)
+cmake_minimum_required (VERSION 3.1.0)
 
 project (wtrade)
 
@@ -14,6 +14,7 @@ file (GLOB WTRADE_SOURCES "*.cpp")
 # Compile project
 add_executable (wtrade ${WTRADE_SOURCES})
 target_link_libraries(wtrade  ${Qt5Widgets_LIBRARIES})
+target_link_libraries(wtrade ${Qt5Core_LIBRARIES})
 target_link_libraries(wtrade wtradegui)
 set_property(TARGET wtrade PROPERTY CXX_STANDARD 11)
 set_property(TARGET wtrade PROPERTY CXX_STANDARD_REQUIRED ON)

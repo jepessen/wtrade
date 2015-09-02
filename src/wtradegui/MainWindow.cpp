@@ -1,4 +1,5 @@
 #include "wtradegui/MainWindow.h"
+#include "wtradegui/MenuBar.h"
 
 namespace WTradeGui {
 
@@ -10,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 		QMainWindow(parent),
 		m_menuBar(new MenuBar(this)) {
 		setMenuBar(m_menuBar);
+		createMenuConnections();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -25,6 +27,19 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::showEvent(QShowEvent *event) {
 	QMainWindow::showEvent(event);
 	emit windowIsShown();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PRIVATE SECTION                                                           //
+///////////////////////////////////////////////////////////////////////////////
+
+void MainWindow::createMenuConnections() {
+	const auto menuList = m_menuBar->getMenuList();
+	for (const auto& it : menuList) {
+		connect(it, QMenu::triggered, [=](const QAction* action) {
+			emit menuActionSelected(MenuAction(it->title(), action->text()));
+		});
+	}
 }
 
 } // namespace WTradeGui

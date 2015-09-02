@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0.0)
+cmake_minimum_required (VERSION 3.1.0)
 
 project (wtradegui)
 
@@ -9,10 +9,11 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package (Qt5Widgets REQUIRED)
 include_directories (${CMAKE_SOURCE_DIR}/src ${Qt5Widgets_INCLUDE_DIRS})
-file (GLOB WTRADE_SOURCES "*.cpp")
+file (GLOB WTRADEGUI_SOURCES "*.cpp")
 
 # Compile project
-add_library (wtradegui ${WTRADE_SOURCES})
-target_link_libraries(wtradegui  ${Qt5Widgets_LIBRARIES})
-set_property(TARGET wtrade PROPERTY CXX_STANDARD 11)
-set_property(TARGET wtrade PROPERTY CXX_STANDARD_REQUIRED ON)
+add_definitions (-DWTRADEGUI_LIBRARY)
+add_library (wtradegui SHARED ${WTRADEGUI_SOURCES})
+target_link_libraries (wtradegui  ${Qt5Widgets_LIBRARIES})
+set_property (TARGET wtradegui PROPERTY CXX_STANDARD 11)
+set_property (TARGET wtradegui PROPERTY CXX_STANDARD_REQUIRED ON)

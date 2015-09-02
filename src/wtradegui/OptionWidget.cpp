@@ -1,0 +1,14 @@
+#include "wtradegui/OptionWidget.h"
+
+namespace WTradeGui {
+
+///////////////////////////////////////////////////////////////////////////////
+// PUBLIC SECTION                                                            //
+///////////////////////////////////////////////////////////////////////////////
+
+OptionWidget::OptionWidget(QWidget *parent) :
+	QDialog(parent) {
+}
+
+} // namespace WTradeGui
+

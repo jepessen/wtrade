@@ -1,4 +1,5 @@
 #include "wtradegui/FileMenu.h"
+#include "wtradegui/Strings.h"
 
 namespace WTradeGui {
 
@@ -8,15 +9,16 @@ namespace WTradeGui {
 
 FileMenu::FileMenu(QWidget *parent) :
 		QMenu(parent) {
-		setTitle(tr("&File"));
-		addAction(tr("&New..."));
-		addAction(tr("&Open..."));
-		addAction(tr("&Save"));
-		addAction(tr("Save &As..."));
-		addAction(tr("&Close..."));
+		setTitle(Menu::FileName);
+		addAction(Action::NewName);
+		addAction(Action::OpenName);
+		addAction(Action::SaveName);
+		addAction(Action::SaveAsName);
+		addAction(Action::CloseName);
 		addSeparator();
-		addAction(tr("&Print report..."));
-		addAction(tr("&Quit"));
+		addAction(Action::PrintReportName);
+		addSeparator();
+		addAction(Action::QuitName);
 }
 
 } // namespace WTradeGui
