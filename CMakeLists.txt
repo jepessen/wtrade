@@ -20,3 +20,4 @@ message ("Setting QT_DIR To ${QT_DIR}")
 message ("Setting BOOST_ROOT to ${BOOST_ROOT}")
 
 add_subdirectory (src)
+add_subdirectory (subtrees)
