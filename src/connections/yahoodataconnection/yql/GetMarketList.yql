@@ -1,0 +1,1 @@
+select * from yahoo.finance.historicaldata where symbol = "%1" and startDate = "%2" and endDate = "%3"

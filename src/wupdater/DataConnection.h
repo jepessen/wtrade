@@ -2,7 +2,7 @@
 #define WUPDATER_DATACONNECTION_H_
 
 #include "wupdater/wupdater_global.h"
-//#include "trade/Market.h"
+#include "trade/Market.h"
 #include <QString>
 #include <QtPlugin>
 #include <memory>
@@ -18,7 +18,7 @@ public:
 
 	virtual ~DataConnection(){}
 	virtual QString getName() const = 0;
-	//virtual Trade::MarketList getMarketList() const = 0;
+	virtual Trade::MarketList getMarketList() const = 0;
 };
 
 } // namespace WUpdater

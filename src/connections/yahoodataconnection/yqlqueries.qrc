@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/yql">
+        <file>yql/GetMarketList.yql</file>
+    </qresource>
+</RCC>

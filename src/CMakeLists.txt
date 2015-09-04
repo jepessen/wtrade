@@ -1,11 +1,16 @@
 cmake_minimum_required (VERSION 3.1.0)
 
+add_subdirectory (trade)
 add_subdirectory (wtrade)
 add_subdirectory (wtradegui)
 add_subdirectory (wlogger)
 add_subdirectory (wupdater)
+add_subdirectory (connections)
 
 add_dependencies (wtradegui wlogger)
 add_dependencies (wtrade wlogger)
 add_dependencies (wtrade wtradegui)
 add_dependencies (wupdater wlogger)
+add_dependencies (wupdater trade)
+add_dependencies (yahoodataconnection trade)
+add_dependencies (yahoodataconnection wupdater)
