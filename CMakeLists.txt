@@ -21,3 +21,4 @@ message ("Setting BOOST_ROOT to ${BOOST_ROOT}")
 
 add_subdirectory (src)
 add_subdirectory (subtrees)
+add_subdirectory (test)

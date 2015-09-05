@@ -8,6 +8,7 @@ add_subdirectory (wupdater)
 add_subdirectory (connections)
 
 add_dependencies (wtradegui wlogger)
+add_dependencies (wtradegui trade)
 add_dependencies (wtrade wlogger)
 add_dependencies (wtrade wtradegui)
 add_dependencies (wupdater wlogger)

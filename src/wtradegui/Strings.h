@@ -18,6 +18,9 @@ const QString PrintReportName(QObject::tr("&Print report..."));
 const QString QuitName(QObject::tr("&Quit"));
 const QString OptionsName(QObject::tr("&Options..."));
 } // namespace Action
+namespace Label {
+const QString Qty(QObject::tr("Qty"));
+} // namespace Label
 } // namespace WTradeGui
 
 #endif // !WTRADEGUI_STRINGS_H_
