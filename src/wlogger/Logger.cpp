@@ -28,6 +28,7 @@ void Logger::write(const Level &level, const std::string &message) {
 			BOOST_LOG_TRIVIAL(fatal) << message;
 		}
 	}
+	emit logAdded(QDateTime::currentDateTime(), level, QString::fromStdString(message));
 }
 
 void Logger::write(const Level &level, const std::wstring &message) {
@@ -51,6 +52,7 @@ void Logger::write(const Level &level, const std::wstring &message) {
 			BOOST_LOG_TRIVIAL(fatal) << message;
 		}
 	}
+	emit logAdded(QDateTime::currentDateTime(), level, QString::fromStdWString(message));
 }
 
 void Logger::write(const Level &level, const QString &message) {
@@ -79,6 +81,7 @@ void Logger::write(const Level &level, const QString &message) {
 			BOOST_LOG_TRIVIAL(fatal) << text;
 		}
 	}
+	emit logAdded(QDateTime::currentDateTime(), level, message);
 }
 
 } // namespace WLogger

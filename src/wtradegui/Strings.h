@@ -30,10 +30,26 @@ const QString Info(QObject::tr("Info"));
 const QString Warning(QObject::tr("Warning"));
 const QString Error(QObject::tr("Error"));
 const QString Fatal(QObject::tr("Fatal"));
+const QString User(QObject::tr("User"));
+const QString Password(QObject::tr("Password"));
+const QString Database(QObject::tr("Database"));
+const QString Connection(QObject::tr("Connection"));
+const QString BackupRestore(QObject::tr("Backup/Restore"));
 } // namespace Label
 namespace Time {
 const QString YMDHSM(QObject::tr("yyyy-MM-dd - hh:mm:ss.zzz"));
 } // namespace Time
+namespace Button {
+const QString Ok(QObject::tr("&Ok"));
+const QString Apply(QObject::tr("&Apply"));
+const QString Close(QObject::tr("&Close"));
+} // namespace Button
+namespace Log {
+const QString OptionWidgetCreated(QObject::tr("Option window created."));
+const QString OptionWidgetDatabaseCreated(QObject::tr("Option window: Database section selected."));
+const QString OptionWidgetItemSelected(QObject::tr("Option window: Connection item selected: "));
+const QString OptionWidgetSubItemSelected(QObject::tr("Option window: Connection subitem selected: "));
+}
 } // namespace WTradeGui
 
 #endif // !WTRADEGUI_STRINGS_H_
