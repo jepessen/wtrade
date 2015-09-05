@@ -4,6 +4,7 @@
 #include "wtradegui/wtradegui_global.h"
 #include <QDockWidget>
 #include <QGridLayout>
+#include <QDateTime>
 
 namespace WTradeGui {
 
@@ -18,6 +19,10 @@ public:
 
 	explicit LoggerWidget(QWidget *parent = 0);
 	virtual ~LoggerWidget() = default;
+
+public slots:
+
+	void addRow(const QDateTime &timeStamp, const LogLevel &level, const QString &message);
 
 private:
 

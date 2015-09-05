@@ -23,4 +23,12 @@ LoggerWidget::LoggerWidget(QWidget *parent) :
 	setWidget(widget);
 }
 
+///////////////////////////////////////////////////////////////////////////////
+// PUBLIC SLOTS SECTION                                                      //
+///////////////////////////////////////////////////////////////////////////////
+
+void LoggerWidget::addRow(const QDateTime &timeStamp, const LogLevel &level, const QString &message) {
+	m_loggerList->addRow(timeStamp, level, message);
+}
+
 } // namespace WTradeGui

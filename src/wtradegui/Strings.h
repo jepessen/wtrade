@@ -22,6 +22,8 @@ namespace Label {
 const QString Qty(QObject::tr("Qty"));
 const QString Logger(QObject::tr("Logger"));
 const QString Level(QObject::tr("Level"));
+const QString Time(QObject::tr("Time"));
+const QString Message(QObject::tr("Message"));
 const QString Trace(QObject::tr("Trace"));
 const QString Debug(QObject::tr("Debug"));
 const QString Info(QObject::tr("Info"));
@@ -29,6 +31,9 @@ const QString Warning(QObject::tr("Warning"));
 const QString Error(QObject::tr("Error"));
 const QString Fatal(QObject::tr("Fatal"));
 } // namespace Label
+namespace Time {
+const QString YMDHSM(QObject::tr("yyyy-MM-dd - hh:mm:ss.zzz"));
+} // namespace Time
 } // namespace WTradeGui
 
 #endif // !WTRADEGUI_STRINGS_H_

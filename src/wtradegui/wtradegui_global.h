@@ -1,5 +1,5 @@
-#ifndef WTRADEGUI_GLOBAL_H
-#define WTRADEGUI_GLOBAL_H
+#ifndef WTRADEGUI_GLOBAL_H_
+#define WTRADEGUI_GLOBAL_H_
 
 #include <QtCore/qglobal.h>
 
@@ -9,4 +9,17 @@
 #  define WTRADEGUISHARED_EXPORT Q_DECL_IMPORT
 #endif
 
-#endif // WTRADEGUI_GLOBAL_H
+namespace WTradeGui {
+
+enum class LogLevel {
+	TRACE,
+	DEBUG,
+	INFO,
+	WARNING,
+	ERROR,
+	FATAL
+};
+
+} // namespace WTradeGui
+
+#endif // WTRADEGUI_GLOBAL_H_
