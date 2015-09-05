@@ -20,6 +20,14 @@ const QString OptionsName(QObject::tr("&Options..."));
 } // namespace Action
 namespace Label {
 const QString Qty(QObject::tr("Qty"));
+const QString Logger(QObject::tr("Logger"));
+const QString Level(QObject::tr("Level"));
+const QString Trace(QObject::tr("Trace"));
+const QString Debug(QObject::tr("Debug"));
+const QString Info(QObject::tr("Info"));
+const QString Warning(QObject::tr("Warning"));
+const QString Error(QObject::tr("Error"));
+const QString Fatal(QObject::tr("Fatal"));
 } // namespace Label
 } // namespace WTradeGui
 
