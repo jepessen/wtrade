@@ -1,4 +1,10 @@
 # wtrade
+
+# WARNING
+
+This repository is at very early stage. It's not usable and It does not work. This warning will be removed then the project will begin to be usable.
+
+# Introduction
 Program for stock trading. It does not perform trading but it can retrieve info and perform operation in order to check best operations.
 
 # Remotes
